@@ -23,11 +23,7 @@ Script **will overwrite**:
 
 ## Usage for linux
 
-If you're on linux, run `root.sh` script in terminal and follow instructions. Make sure that you have [enabled USB debugging mode](#enabling-usb-debugging-mode) in your phone.
-
-```shell
-./root.sh
-```
+If you're on linux, run `root.sh` script from propper folder in terminal and follow instructions. Make sure that you have [enabled USB debugging mode](#enabling-usb-debugging-mode) in your phone.
 
 ## Usage for non-linux systems (Windows etc.)
 
@@ -37,7 +33,7 @@ I don't have time for develop scripts for other systems, but you can root your p
 2. Extract downloaded package.
 3. [Enable USB debugging mode](#enabling-usb-debugging-mode) in your phone.
 4. Connect your phone with computer.
-5. Open terminal in extracted `asus-zenfone-5-root` directory (you don't need reboot your phone manually, just execute following commands).
+5. Open terminal in extracted `asus-zenfone-5-root/{version}` directory (you don't need reboot your phone manually, just execute following commands).
 6. Reboot to bootloader.
 
     ```shell
@@ -47,33 +43,33 @@ I don't have time for develop scripts for other systems, but you can root your p
 7. Unlock fastboot.
 
     ```shell
-    fastboot flash fastboot files/root/fastboot.img
+    fastboot flash fastboot root/fastboot.img
     fastboot reboot-bootloader
     ```
 
 8. Unlock bootloader (**this can take up to 3 minutes**, please be patient).
 
     ```shell
-    fastboot flash dnx files/vanilla/dnx_fwr_ctp_a500cg.bin
-    fastboot flash ifwi files/root/ifwi_ctp_a500cg.bin
+    fastboot flash dnx vanilla/dnx_fwr_ctp_a500cg.bin
+    fastboot flash ifwi root/ifwi_ctp_a500cg.bin
     fastboot reboot-bootloader
     ```
 
 9. Root phone (**an error during this part is normal** - just ignore it).
 
     ```shell
-    fastboot flash recovery files/root/recovery.img
-    fastboot flash update files/root/dummy.zip
+    fastboot flash recovery root/recovery.img
+    fastboot flash update root/dummy.zip
     adb reboot bootloader
     ```
 
 10. Restore vanilla files.
 
     ```shell
-    fastboot flash fastboot files/vanilla/fastboot.img
-    fastboot flash recovery files/vanilla/recovery.img
-    fastboot flash dnx files/vanilla/dnx_fwr_ctp_a500cg.bin
-    fastboot flash ifwi files/vanilla/ifwi_ctp_a500cg.bin
+    fastboot flash fastboot vanilla/fastboot.img
+    fastboot flash recovery vanilla/recovery.img
+    fastboot flash dnx vanilla/dnx_fwr_ctp_a500cg.bin
+    fastboot flash ifwi vanilla/ifwi_ctp_a500cg.bin
     fastboot reboot
     ```
 
