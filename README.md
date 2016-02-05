@@ -97,6 +97,9 @@ All done, enjoy your rooted phone.
 ## Usefull links
 
 [Youtube guide how to root lolipop zenfone 5](https://www.youtube.com/watch?v=x42SEGahCC0)
+
 [rooting scripts mentioned in this video (and also available in their description and here as AsusZenfoneLollipopRootKit.zip)](https://drive.google.com/open?id=0ByzlvYYhluSdY1VSamptMzVfTTQ)
+
 [Official site with updates and drivers](https://www.asus.com/Phone/ZenFone_5_A500CG/HelpDesk_Download/)
+
 [Guide to install TWRP/PhilZ touch recovery](http://www.asuszenfoneblog.com/2015/04/install-twrp-philz-recovery-for-asus.html)
